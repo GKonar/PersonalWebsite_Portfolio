@@ -1,0 +1,97 @@
+// ********** Animations for header **********
+
+// Slide hello from left
+@keyframes moveInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveBackToLeft {
+    0% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-30rem);
+    }
+}
+
+
+
+// Scale hello
+@keyframes scaleLetters {
+    0% {
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+// Slide first and second name
+@keyframes slideUp {
+    0% {
+      margin-top: 100%;
+      height: 1000%; 
+    }
+  
+    100% {
+      margin-top: 0%;
+      height: 100%;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        margin-top: 0%;
+        height: 100%;
+    }
+  
+    100% {
+        margin-top: 100%;
+        height: 1000%; 
+    }
+}
+
+@keyframes moveTopBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+// moveToTheMiddle
+
+// @keyframes moveToTheMiddle {
+//     0% {
+//         opacity: 0;
+//         transform: translateY(0rem) translateX(0rem);
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translateY(40rem) translateX(40rem) scale(2);
+//     }
+// }
+
+
+

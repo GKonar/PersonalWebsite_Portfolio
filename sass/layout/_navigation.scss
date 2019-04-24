@@ -1,0 +1,131 @@
+//NAVIGATION SCREEN
+
+.navigation {
+    position: relative;
+    z-index: 1000;
+    margin-top: 3rem;
+    font-size: 62.5%;
+
+    // ********** LOGO STYLES
+    &__logo {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $color-white;
+        transition: .4s;
+        letter-spacing: 1px;
+        text-decoration: none;
+        
+
+        @media only screen and (max-width: $bp-800) {
+            position: relative;
+            display: inline-flex;
+            left: 5%;
+            z-index: -1000;
+        }
+
+        @media only screen and (max-width: $bp-500) {
+            left: 10%;
+        }
+
+        @media only screen and (max-width: $bp-300) {
+            left: 12%;
+        }
+
+        &::after {
+            content: "";
+            border: 2px solid $color-white;
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .4s;
+        }
+
+        &:hover {
+            color: $color-main;
+
+            @media only screen and (max-width: $bp-800) {
+                color: $color-white;
+            }
+            
+            &::after {
+                border: 3px solid $color-main;
+                left: -50%;
+                top: -45%;
+                transform: rotate(180deg);
+
+                @media only screen and (max-width: $bp-800) {
+                    transform: none;
+                    border: 3px solid $color-white;
+                }
+            }
+        }
+    }
+
+    // ********** MENU ITEMS STYLES
+    &__items {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin-right: 5rem;
+        color: $color-main;
+
+        @media only screen and (max-width: $bp-800) {
+            display: none;
+        }
+    }
+
+    &__item {
+        margin:  0rem 4rem;
+        border-bottom: 2px solid transparent;
+        transition: all .4s;
+        color: $color-main;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: flex;
+            border-bottom: 2px solid $color-main;
+            position: absolute;
+            top: 2.5rem;
+            left: 0;
+            z-index: 1;
+            transition: all .6s;
+            opacity: 0;
+            transform: translateY(1rem);
+            color: $color-main;
+        }
+
+        &:hover { 
+            text-decoration: none;
+            
+            // On hover change after sudo element styles
+            &::after {
+                color: $color-main;
+                transform: translateY(0rem);
+                opacity: 1;
+                z-index: 1;
+                width: 100%;
+            }
+        }
+
+        &:hover .navigation__link {
+            color: $color-main;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-white;
+            font-size: 2rem;
+            transition: .5s;
+        }
+    }
+}

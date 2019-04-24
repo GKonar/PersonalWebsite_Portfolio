@@ -1,0 +1,367 @@
+.header {
+    width: 100%;
+    height: 101.1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6.5rem;
+    background-image: linear-gradient(to top, #031122 0%, $color-black 100%);
+    position: relative;
+    // overflow: hidden;
+
+    @media only screen and (max-width: $bp-800) {
+        height: 100vh;
+    }
+
+    &:hover {
+        cursor: url("/img/baloon.png"), auto;
+    }
+
+    // ********** HEADER TEXT ( paragraph + firstName + secondName )
+    .heading-primary {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: $font-5;
+        margin-right: 10rem;
+        letter-spacing: 6px;
+        z-index: 10;
+        height: 100%;
+        position: absolute;
+        transition: .5s;
+        opacity: 0;
+        
+        // ********* HELLO I AM STYLES ********
+        &__paragraph {
+            display: flex;
+            font-size: 3.5rem;
+            position: relative;
+            font-weight: 700;
+            color: $color-white;
+
+            @media only screen and (max-width: $bp-700) {
+                font-size: 3rem;
+            }
+
+            @media only screen and (max-width: $bp-500) {
+                font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: $bp-300) {
+                font-size: 1.8rem;
+            }
+        }
+
+        // ********** FIRST AND SECOND-NAME STYLES **********
+        [class*="name"] {
+            font-size: 8rem;
+            color: $color-white;
+            overflow: hidden;
+            margin-top: 0%;
+            height: 10rem;
+            font-weight: 700;
+            transition: 1s;
+
+            @media only screen and (max-width: $bp-700) {
+                font-size: 6rem;
+                height: 7rem;
+            }
+
+            @media only screen and (max-width: $bp-500) {
+                font-size: 4.5rem;
+                height: 5.5rem;
+            }
+
+            @media only screen and (max-width: $bp-300) {
+                font-size: 3.5rem;
+                height: 5rem;
+            }
+        }
+    }
+
+    // TEXT BOX STYLES ***********
+    
+    .header__text-box {   
+        z-index: 10;
+        height: 60%;
+        width: 100%;
+        padding: 10% 15%;
+        overflow: scroll;
+        overflow-x: hidden;
+        position: relative;
+        top: -2rem;
+
+        @media only screen and (max-width: $bp-800) {
+            padding: 5% 10%;
+            display: none;
+        }
+
+        @media only screen and (max-width: $bp-500) {
+            padding: 5% 8%;
+        }
+
+        @media only screen and (max-width: $bp-300) {
+            padding: 5% 5%;
+        }
+
+        // Paragraphs general styles
+        [class*="paragraph"] {
+            color: $color-white;
+            font-size: 2.5rem;
+            line-height:4.5rem;
+            text-align: justify;
+    
+            @media only screen and (max-width: $bp-800) {
+                font-size: 2rem;
+                line-height: 3.5rem;
+            }
+
+            @media only screen and (max-width: $bp-500) {
+                font-size: 1.6rem;
+                line-height: 3rem;
+            }
+
+            @media only screen and (max-width: $bp-300) {
+                line-height: 1.7rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        // Text box paragraphs
+        &-paragraph-first {
+            padding-top: 150rem; // when more text add more padding so text is not visible at the page load
+
+            @media only screen and (max-width: $bp-700) {
+                padding-top: 80rem;
+            }
+        }
+
+        &-paragraph-second {
+            padding-top: 2rem;
+        }
+
+        &-paragraph-third {
+            padding-top: 2rem; 
+            padding-bottom: 30rem;
+
+            @media only screen and (max-width: $bp-800) {
+                padding-bottom: 0rem;
+            }
+        }
+
+        &-size {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: $color-main;
+        }
+        
+        // ********** BTNS ********** 
+        //  General btn styles
+        &-btn-container {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 4rem; // 18rem moz
+
+            @media only screen and (max-width: $bp-800) {
+                display: none;
+            }
+            
+        }
+
+        &-btn {
+            &,
+            &:link,
+            &:visited{
+                color: $color-white;
+                text-decoration: none;
+                font-size: 2.5rem;
+                font-weight: 500;
+                padding: 1.5rem 4rem;
+                width: 30%;
+                border: 2px solid $color-white;
+                margin: 1rem;
+                text-align: center;
+            }
+
+            &:hover {
+                background-color: $color-main;
+                color: $color-white;
+                border: 2px solid $color-white;
+            }
+        }
+    }
+
+    // scroll display none
+    .header__text-box::-webkit-scrollbar { 
+        display: none; 
+    } 
+
+    // ********** ANIMATED ARROW  // FIX ARROW
+    &__arrow-container {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        opacity: .4;
+    }
+
+    &__arrow-icon {
+        font-size: 5rem;
+        text-shadow: 0 .2rem .5rem $color-main;
+        color: $color-main;
+        opacity: 0;
+        animation: moveTopBottom 1s cubic-bezier(.65,.7,0,.24) infinite 2s;
+
+        @media only screen and (max-width: $bp-800) {
+            font-size: 3.5rem;
+        }
+    }
+
+    .backdrop {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #031122c6;
+        z-index: 2000;
+        
+        display: none;
+    }
+}
+
+// TEXT BOX VISIBLE ON MOBILE DEVICES
+.text-box__mobile {
+    display: none;
+    background-image: linear-gradient(to bottom, #031122 0%, $color-black 100%);
+
+    @media only screen and (max-width: $bp-800) {
+        z-index: 1000;
+        display: flex;
+        overflow-x: auto;
+
+        // Makes scrolling touch friendly
+        -webkit-overflow-scrolling: touch;
+    }
+
+    // pargarphs styles
+    [class*="mobile-p"] {
+        @media only screen and (max-width: $bp-800) {
+            font-size: 2rem;
+            color: $color-gray-blue-1;
+            padding: 2rem 3rem;
+            line-height: 3rem;
+            text-align: justify;
+            min-width: 85%;
+        }
+
+        @media only screen and (max-width: $bp-700) {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+        }
+
+        @media only screen and (max-width: $bp-600) {
+            font-size: 1.4rem;
+            padding: 2rem 4rem;
+            line-height: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-500) {
+            font-size: 1.2rem;
+            padding: 2rem 1.5rem;
+            line-height: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-300) {
+            font-size: 1.2rem;
+            padding: 2rem 2rem;
+            line-height: 2rem;
+        }
+    }
+
+    .text-box__p-start {
+        color: $color-main;
+        font-weight: 700;
+    }
+}
+
+  // CLASSES TO ADD THROUGH JAVASCRIPT 
+
+.showGreeting {
+    animation: moveInFromLeft .5s cubic-bezier(.11,.93,.62,1.01);
+
+    @media only screen and (max-width: $bp-700) {
+        animation: moveInFromLeft .2s cubic-bezier(.11,.93,.62,1.01); 
+    }
+}
+
+.hideGreeting {
+    animation: moveBackToLeft .5s cubic-bezier(.11,.93,.62,1.01);
+    opacity: 0;
+    
+    @media only screen and (max-width: $bp-700) {
+        animation: moveBackToLeft .3s cubic-bezier(.11,.93,.62,1.01); 
+    }
+}
+  
+.showName {
+    animation: 2s slideUp ease;
+    
+    @media only screen and (max-width: $bp-700) {
+        animation: 1s slideUp ease;
+    }
+}
+
+.showNameDelay {
+    animation: 3s slideUp ease;
+
+    @media only screen and (max-width: $bp-700) {
+        animation: 1.5s slideUp ease;
+    }
+}
+
+.hideName {
+    animation: 2s slideDown ease;
+    opacity: 0;
+
+    @media only screen and (max-width: $bp-700) {
+        animation: 1s slideDown ease;
+    }
+}
+
+.hideNameDelay {
+    animation: 3s slideDown ease;
+    opacity: 0;
+
+    @media only screen and (max-width: $bp-700) {
+        animation: 1.5s slideDown ease;
+    }
+}
+
+.fullOpacity {
+    opacity: 1;
+}
+
+.zeroOpacity {
+    opacity: 0;
+}
+
+.margin {
+    margin-left: 25%;
+}
+
+ // ***** Moving background *****
+ .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+// Different value for Firefox
+@-moz-document url-prefix() { 
+    .header__text-box-btn-container { 
+        margin-bottom: 14rem;
+    } 
+}

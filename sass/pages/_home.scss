@@ -1,0 +1,61 @@
+// FONT IMPORT
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&subset=latin-ext');
+
+
+$font-1: 'Raleway', sans-serif;
+$font-5: "Lato", sans-serif;
+
+// font-family: 'Raleway', sans-serif;  +
+ 
+//GENERAL STYLES
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html { // Setting 1rem
+    font-size: 62.5%; // 1rem = 10px
+    // for mediaquery: 1em = 16px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    transition: .3s;
+    overflow: hidden;
+    position: relative;
+
+    // Check
+    display: flex;
+    flex-direction: column;
+    
+    //Typography 
+    font-family: $font-1;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-800) {
+        overflow: visible;
+    }
+}
+
+::selection {
+    background-color: $color-main;
+    color: $color-white;
+}
+

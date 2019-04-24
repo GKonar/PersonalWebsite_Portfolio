@@ -1,0 +1,286 @@
+.about {
+    font-size: 1.8rem;
+    color: $color-gray-blue-1;
+    line-height: 3rem;
+    background-image: linear-gradient(to top, #031122b1 0%, rgba(0, 0, 0, 0.358) 100%);
+    // background-color: #03112295;
+    border-top: 2px solid #2f354272;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    bottom: -40%; // 0
+    display: none; // flex
+    padding: 3rem 0;
+    transition: .6s;
+
+    @media only screen and (max-width: $bp-800) {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-image: linear-gradient(to top, #031122 0%, $color-black 100%);
+        justify-content: center;
+    }
+
+
+//// **************** LEFT SIDE CONTENT
+    
+    // Left Heading .Works
+    &__heading {
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+
+        @media only screen and (max-width: $bp-800) {
+            font-size: 2rem;
+            padding: 0 1rem;
+        }
+
+        @media only screen and (max-width: $bp-300) {
+            font-size: 1.6rem;
+            padding: 0 1rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 1.8rem;
+            left: 9%;
+            width: 82%;
+            height: .2rem;
+            z-index: -20;
+            transition: .3s;
+            transform: scaleX(0);
+            // backface-visibility: hidden;
+
+            @media only screen and (max-width: $bp-800) {
+                content: none;
+            }
+        }
+    }
+
+    // Left Content .Works **************
+    &__left {
+        border-right: 2px solid $color-gray-blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1.5rem;
+        position: relative;
+
+        @media only screen and (max-width: $bp-800) {
+            border: none;
+        }
+
+        &:hover .about__heading{
+            color: $color-main;
+
+            @media only screen and (max-width: $bp-800) {
+                color: $color-gray-blue-1;
+            }
+
+            &::before {
+                height: .2rem;
+                background-color: $color-main;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    // SVG ICONS STYLES
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding: 1.5rem 3rem 1.5rem 2rem; 
+    }
+
+    &__icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0 1rem;
+        fill: $color-blue-1;
+        transition: .2s;
+
+        @media only screen and (max-width: $bp-800) {
+            width: 3rem;
+            height: 3rem;
+        }
+        @media only screen and (max-width: $bp-500) {
+            min-width: 2.5rem;
+            min-height: 2.5rem;;
+        }
+        @media only screen and (max-width: $bp-300) {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin: 0 .5rem;
+        }
+        
+        &:hover {
+            transform: scale(1.2);
+
+            @media only screen and (max-width: $bp-800) {
+                transform: none;
+            }
+        }}
+        
+    .github {
+        color: $color-main;
+        text-decoration: none;
+        position: relative;
+
+        @media only screen and (max-width: $bp-800) {
+            text-decoration: underline;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $color-main;
+            width: 100%;
+            height: 5%;
+            z-index: -20;
+            transition: .2s;
+
+            @media only screen and (max-width: $bp-700) {
+                content: none;
+            }
+        }
+
+        &:hover {
+            &::before {
+                height: 100%;
+                border: 1px solid $color-main;
+                background-color: $color-white;
+            }
+        }
+    }
+        
+    .npm {
+        fill: red;
+    }
+        
+    .html {
+        fill: orangered;
+    }
+
+    .css {
+        fill: $color-blue-3;
+    }
+        
+    .js {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 5px;
+        background-color: $color-js;
+
+        @media only screen and (max-width: $bp-500) {
+            width: 3rem;
+            height: 3rem;;
+        }
+    }
+
+    &__tech-desc {
+        font-size: 2rem;
+        position: absolute;
+        bottom: -.5rem;
+        left: 50%;
+        transform: translate(-50%, 0%);
+
+        @media only screen and (max-width: $bp-800) {
+            display: none;
+        }
+    }
+//// **************** SVG ICONS STYLES END HERE
+
+//// **************** RIGHT SIDE CONTENT
+
+    // Right Content .Works **************
+    &__right {
+        padding: 2rem 3rem 2rem 4rem;
+
+        // Right Heading
+        &-heading {
+            padding: .5rem .5rem;
+            margin-bottom: .5rem;
+            color: $color-gray-blue-1;
+            display: inline-flex;
+            position: relative;
+
+            @media only screen and (max-width: $bp-800) {
+                display: flex;
+                justify-content: center;
+                padding: 0rem 0rem 3rem 0;
+                font-size: 3rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $color-main;
+                width: 100%;
+                height: .2rem;
+                z-index: -20;
+                transition: .3s;
+                transform: scaleX(0);
+
+                @media only screen and (max-width: $bp-800) {
+                    content: none;
+                }
+            }
+        }
+
+        &-paragraph {
+            line-height: 3rem;
+            font-size: 2rem;
+
+            @media only screen and (max-width: $bp-800) {
+                line-height: 2.5rem;
+                font-size: 1.6rem;
+                padding: 1rem 4rem;;
+            }
+
+            @media only screen and (max-width: $bp-700) {
+                line-height: 2.3rem;
+                font-size: 1.4rem;
+            }
+
+            @media only screen and (max-width: $bp-500) {
+                line-height: 2rem;
+                font-size: 1.2rem;
+                padding: 1rem .5rem;
+                text-align: justify;
+            }
+        }
+
+        &:hover .about__right-heading {
+            color: $color-main;
+
+            @media only screen and (max-width: $bp-800) {
+                color: $color-gray-blue-1;
+            }
+
+            &::before {
+                height: .2rem;
+                background-color: $color-main;
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+// Classes to add through JS
+
+// display
+.flex { display: flex; }
+.none { display: none; }
+
+// position
+.bottomShow { bottom: 0; }
+.bottomHide { bottom: -40%; } 

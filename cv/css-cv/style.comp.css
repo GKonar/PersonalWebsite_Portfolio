@@ -1,0 +1,220 @@
+:root {
+  --color-primary: #F56040;
+  --color-white: #fff;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --shadow-main: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  --line: 1px solid var(--color-grey-light-2); }
+
+body {
+  background-color: #2f3542;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo', sans-serif; }
+
+.content {
+  min-width: 60rem;
+  max-width: 60rem;
+  margin: 4rem auto;
+  padding: 3rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-main);
+  position: relative; }
+  @media only screen and (max-width: 37.5rem) {
+    .content {
+      min-width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem; } }
+
+.content__top {
+  display: flex;
+  min-width: 60rem;
+  border-bottom: 2px solid #2f354248;
+  padding-bottom: 1.5rem; }
+  @media only screen and (max-width: 37.5rem) {
+    .content__top {
+      flex-direction: column;
+      min-width: 100%;
+      max-width: 100%; } }
+  .content__top-img-box {
+    flex: 0 0 20%; }
+    @media only screen and (max-width: 37.5rem) {
+      .content__top-img-box {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+  .content__top-img {
+    width: 100%; }
+    @media only screen and (max-width: 37.5rem) {
+      .content__top-img {
+        width: 50%; } }
+
+.content__top-text {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  @media only screen and (max-width: 37.5rem) {
+    .content__top-text {
+      padding: 0 1rem; } }
+  .content__top-text--name {
+    font-size: 2.4rem;
+    margin: 0 0 0 0;
+    color: var(--color-primary); }
+    @media only screen and (max-width: 31rem) {
+      .content__top-text--name {
+        font-size: 2rem;
+        text-align: center; } }
+  .content__top-text--desc {
+    margin: .3rem 0;
+    font-weight: 400;
+    color: var(--color-grey-dark-3); }
+  .content__top-text--point {
+    font-weight: 200; }
+  .content__top-text--contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 2px solid rgba(245, 97, 64, 0.372);
+    padding-left: .5rem; }
+    @media only screen and (max-width: 37.5rem) {
+      .content__top-text--contact {
+        position: relative;
+        border: 2px solid rgba(245, 97, 64, 0.372);
+        padding: .5rem; } }
+    .content__top-text--contact p {
+      margin: 0;
+      color: var(--color-grey-dark-3); }
+
+.experience__heading {
+  font-weight: 600;
+  color: var(--color-primary); }
+
+.experience__first-exp, .experience__second-exp {
+  display: flex;
+  padding: 2rem 0; }
+  @media only screen and (max-width: 37.5rem) {
+    .experience__first-exp, .experience__second-exp {
+      flex-direction: column; } }
+
+.experience__first-exp--date, .experience__second-exp--date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 0 0 20%; }
+  @media only screen and (max-width: 37.5rem) {
+    .experience__first-exp--date, .experience__second-exp--date {
+      align-items: flex-start;
+      padding-bottom: 1rem; } }
+  .experience__first-exp--date-p1, .experience__second-exp--date-p1 {
+    display: inline-flex;
+    justify-content: flex-end;
+    background-color: var(--color-grey-dark-3);
+    color: var(--color-white);
+    padding: .2rem;
+    margin: 0;
+    font-weight: 300;
+    width: 100%; }
+    @media only screen and (max-width: 37.5rem) {
+      .experience__first-exp--date-p1, .experience__second-exp--date-p1 {
+        justify-content: flex-start; } }
+  .experience__first-exp--date-p2, .experience__second-exp--date-p2 {
+    margin: 0;
+    font-weight: 200; }
+
+.experience__first-exp--info, .experience__second-exp--info {
+  flex: 0 0 80%; }
+  @media only screen and (max-width: 37.5rem) {
+    .experience__first-exp--info, .experience__second-exp--info {
+      width: 100%; } }
+  .experience__first-exp--info-p, .experience__second-exp--info-p {
+    margin: 0;
+    padding: 0 4rem;
+    font-weight: 200;
+    line-height: 1.5rem; }
+    @media only screen and (max-width: 37.5rem) {
+      .experience__first-exp--info-p, .experience__second-exp--info-p {
+        padding: 0 2rem; } }
+    @media only screen and (max-width: 31rem) {
+      .experience__first-exp--info-p, .experience__second-exp--info-p {
+        padding: 0 1rem; } }
+    @media only screen and (max-width: 25rem) {
+      .experience__first-exp--info-p, .experience__second-exp--info-p {
+        padding: 0 .5rem; } }
+    .experience__first-exp--info-p span, .experience__second-exp--info-p span {
+      font-weight: 500;
+      display: flex;
+      border-bottom: 1px solid var(--color-grey-dark-3);
+      margin-bottom: .5rem; }
+  .experience__first-exp--info-link, .experience__second-exp--info-link {
+    color: var(--color-primary); }
+
+.education__info-p {
+  position: relative; }
+  .education__info-p::after {
+    content: '';
+    position: absolute;
+    top: -.4rem;
+    left: 8.5%;
+    width: 82%;
+    border-bottom: 1px solid var(--color-grey-dark-3); }
+
+.skills {
+  padding-bottom: 2rem; }
+  .skills__heading {
+    padding-bottom: 1rem; }
+  .skills__technologies {
+    padding-left: 26.5%;
+    position: relative; }
+    @media only screen and (max-width: 37.5rem) {
+      .skills__technologies {
+        padding: 0; } }
+  .skills__skill {
+    padding: 0 .2rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 3px;
+    color: var(--color-white);
+    background-color: var(--color-primary); }
+    @media only screen and (max-width: 37.5rem) {
+      .skills__skill {
+        margin: 1rem 0; } }
+    .skills__skill:hover {
+      color: var(--color-primary);
+      background-color: var(--color-white);
+      cursor: pointer; }
+
+.extras {
+  display: flex; }
+  @media only screen and (max-width: 37.5rem) {
+    .extras {
+      flex-direction: column; } }
+  .extras__heading {
+    flex: 0 0 25%; }
+  .extras__list {
+    font-weight: 200;
+    line-height: 1.5rem;
+    padding-top: 6rem;
+    position: relative; }
+    @media only screen and (max-width: 37.5rem) {
+      .extras__list {
+        padding-top: 0rem; } }
+    .extras__list::after {
+      content: '';
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      width: 132%;
+      border-bottom: 1px solid var(--color-grey-dark-3); }
+      @media only screen and (max-width: 50rem) {
+        .extras__list::after {
+          content: none; } }
+      @media only screen and (max-width: 37.5rem) {
+        .extras__list::after {
+          content: none; } }
