@@ -17,6 +17,15 @@
     font-size: 1.5rem;
     margin-left: -25%;
 
+    @media only screen and (max-width: $bp-1100) {
+        background-image: linear-gradient(to bottom, #031122 0%, $color-black 100%);
+        position: relative;
+        top: 0rem;
+        margin-left: 0;
+        width: 100%;
+        border-right: none;
+    }
+
     @media only screen and (max-width: $bp-800) {
         background-image: linear-gradient(to bottom, #031122 0%, $color-black 100%);
         position: relative;
@@ -33,7 +42,7 @@
         &:hover .reach-me__contact-heading{
             color: $color-main;
 
-            @media only screen and (max-width: $bp-800) {
+            @media only screen and (max-width: $bp-1100) {
                 color: $color-gray-blue-1;
             }
             &::before {
@@ -43,6 +52,7 @@
         }
     }
 
+    // MY IMAGE
     &__img-container {
         padding-top: 2rem;
         width: 100%;
@@ -60,6 +70,9 @@
         width: 70%;
         border: 2px solid $color-white;
 
+        @media only screen and (max-width: $bp-1100) {
+            width: 30%;
+        }
         @media only screen and (max-width: $bp-800) {
             width: 60%;
         }
@@ -79,26 +92,37 @@
         justify-content: center;
         align-items: center;
 
+        @media only screen and (max-width: $bp-1100) {
+            padding: 4rem 25rem;
+        }
         @media only screen and (max-width: $bp-800) {
             padding: 4rem 10rem;
         }
         @media only screen and (max-width: $bp-500) {
-            padding: 4rem 3.5rem;
+            padding: 2rem 3.5rem;
         }
         @media only screen and (max-width: $bp-300) {
             padding: 4rem 1rem;
         }
     }
 
+    // CONTACT ME heading
     &__contact-heading {
         color: $color-main;
         font-size: 3rem;
         position: relative;
         transition: .3s;
+        margin-bottom: 1.5rem;
 
-        @media only screen and (max-width: $bp-800) {
+        @media only screen and (max-width: $bp-1100) {
             color: $color-gray-blue-1;
+            padding-bottom: 1rem;
         }
+
+        @media only screen and (max-width: $bp-500) {
+            margin-bottom: 0;
+        }
+
         @media only screen and (max-width: $bp-300) {
             font-size: 2.5rem;
             width: 100%;
@@ -117,7 +141,7 @@
             height: .2rem;
             transform: scaleX(0);
 
-            @media only screen and (max-width: $bp-800) {
+            @media only screen and (max-width: $bp-1100) {
                 content: none;
             }
         }
@@ -130,7 +154,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: .5rem 0;
+            padding: .7rem 0;
             color: inherit;
             text-decoration: none;
             font-size: 2rem;
@@ -146,14 +170,14 @@
         &:hover {
             color: #80FF72;
             
-            @media only screen and (max-width: $bp-800) {
+            @media only screen and (max-width: $bp-1100) {
                 color: $color-gray-blue-1;
             }
 
             .mail-icon {
                 fill: #80FF72;
 
-                @media only screen and (max-width: $bp-800) {
+                @media only screen and (max-width: $bp-1100) {
                     fill: $color-gray-blue-1;;
                 }
             }
@@ -164,13 +188,13 @@
         &:hover {
             color: #3B5998;
 
-            @media only screen and (max-width: $bp-800) {
+            @media only screen and (max-width: $bp-1100) {
                 color: $color-gray-blue-1;
             }
             .facebook-icon {
                 fill: #3B5998;
 
-                @media only screen and (max-width: $bp-800) {
+                @media only screen and (max-width: $bp-1100) {
                     fill: $color-gray-blue-1;
                 }
             }
@@ -181,14 +205,19 @@
         &:hover {
             color: #c13584;
 
-            @media only screen and (max-width: $bp-800) {
+            @media only screen and (max-width: $bp-1100) {
                 color: $color-gray-blue-1;
             }
             .instagram-icon {
                 fill: #c13584;
 
-                @media only screen and (max-width: $bp-800) {
+                @media only screen and (max-width: $bp-1100) {
                     fill: $color-gray-blue-1;
+                }
+
+                @media only screen and (max-width: $bp-500) {
+                    width: 3.5rem;
+                    height: 3.5rem;
                 }
             }
         }
@@ -196,7 +225,7 @@
 
     // svg icons general
     &__icons {
-        width: 3rem;
+        width: 3.5rem;
         height: 3rem;
         fill: $color-white;
 
@@ -207,12 +236,34 @@
     }
 
     .mail-icon {
-        width: 3.2rem;
+        width: 3.5rem;
         height: 4rem;
+
+        @media only screen and (max-width: $bp-500) {
+            margin-right: 1px; 
+        }
 
         @media only screen and (max-width: $bp-300) {
             width: 2.2rem;
             height: 3rem;
+        }
+    }
+
+    .facebook-icon {
+        @media only screen and (max-width: $bp-500) {
+            margin-right: 1px;
+        }
+       
+    }
+
+    .facebook-icon,
+    .instagram-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        
+        @media only screen and (max-width: $bp-500) {
+            width: 3.5rem;
+            height: 3.5rem;
         }
     }
 
@@ -224,7 +275,7 @@
         &:hover .reach-me__more-heading {
             color: $color-main;
 
-            @media only screen and (max-width: $bp-800) {
+            @media only screen and (max-width: $bp-1100) {
                 color: $color-gray-blue-1;
             }
 
@@ -289,28 +340,46 @@
         }
     }
 
-
     // MODAL 
     // &__modal {
     //     position: absolute;
-    //     top: 0;
-    //     left: 50%;
-    //     width: 200px;
-    //     height: 200px;
-    //     background-color: #fff;
+    //     transform: translate(-50%, -50%);
+    //     background-image: url();
+    //     top: 50%;
+    //     left: 300%;
+    //     width: 50rem;
+    //     height: 30rem;
+    //     background-color: #fff; 
+    //     z-index: 2100;
+    //     padding: 0 10rem;
+    //     border-radius: 5px;
+
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     flex-direction: column;
+
+    //     &--heading {
+    //         font-size: 3rem;
+    //     }
+
+    //     &--paragraph-1 { 
+
+    //     }
+        
+    //     &--paragraph-2 { 
+
+    //     }
     // }
     
-    
-     
     // FOOTER
     .footer {
         position: absolute;
         bottom: 0;
         left: 0;
-
         width: 100%;
 
-        @media only screen and (max-width: $bp-800) {
+        @media only screen and (max-width: $bp-1100) {
             position: relative;
         }
 

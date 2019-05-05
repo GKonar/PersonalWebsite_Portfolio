@@ -5,9 +5,13 @@
     justify-content: center;
     align-items: center;
     margin-top: -6.5rem;
-    background-image: linear-gradient(to top, #031122 0%, $color-black 100%);
+    background-image: linear-gradient(to top, #031122 0%, $color-gray-blue 100%);
     position: relative;
     // overflow: hidden;
+
+    @media only screen and (max-width: $bp-1100) {
+        height: 100vh;
+    }
 
     @media only screen and (max-width: $bp-800) {
         height: 100vh;
@@ -39,8 +43,9 @@
             font-weight: 700;
             color: $color-white;
 
-            @media only screen and (max-width: $bp-700) {
-                font-size: 3rem;
+            @media only screen and (max-width: $bp-1100) {
+
+                font-size: 2.5rem;
             }
 
             @media only screen and (max-width: $bp-500) {
@@ -61,6 +66,12 @@
             height: 10rem;
             font-weight: 700;
             transition: 1s;
+
+
+            @media only screen and (max-width: $bp-1100) {
+                font-size: 6rem;
+                height: 7rem;
+            }
 
             @media only screen and (max-width: $bp-700) {
                 font-size: 6rem;
@@ -91,24 +102,16 @@
         position: relative;
         top: -2rem;
 
-        @media only screen and (max-width: $bp-800) {
+        @media only screen and (max-width: $bp-1100) {
             padding: 5% 10%;
             display: none;
-        }
-
-        @media only screen and (max-width: $bp-500) {
-            padding: 5% 8%;
-        }
-
-        @media only screen and (max-width: $bp-300) {
-            padding: 5% 5%;
         }
 
         // Paragraphs general styles
         [class*="paragraph"] {
             color: $color-white;
-            font-size: 2.5rem;
-            line-height:4.5rem;
+            font-size: 2.2rem;
+            line-height:3.5rem;
             text-align: justify;
     
             @media only screen and (max-width: $bp-800) {
@@ -161,11 +164,6 @@
             display: flex;
             justify-content: center;
             padding-bottom: 4rem; // 18rem moz
-
-            @media only screen and (max-width: $bp-800) {
-                display: none;
-            }
-            
         }
 
         &-btn {
@@ -192,9 +190,7 @@
     }
 
     // scroll display none
-    .header__text-box::-webkit-scrollbar { 
-        display: none; 
-    } 
+    .header__text-box::-webkit-scrollbar { display: none; } 
 
     // ********** ANIMATED ARROW  // FIX ARROW
     &__arrow-container {
@@ -223,16 +219,29 @@
         top: 0;
         left: 0;
         background-color: #031122c6;
-        z-index: 2000;
+        z-index: 1000;
         
-        display: none;
+        // display: none;
     }
 }
+
+// ************************************************
+// ************* MOBILE VIEW TEXT BOX *************
+// ************************************************
 
 // TEXT BOX VISIBLE ON MOBILE DEVICES
 .text-box__mobile {
     display: none;
-    background-image: linear-gradient(to bottom, #031122 0%, $color-black 100%);
+    background-image: linear-gradient(to top, $color-gray-blue 0%, #031122 100%);
+
+    @media only screen and (max-width: $bp-1100) {
+        z-index: 1000;
+        display: flex;
+        overflow-x: auto;
+
+        // Makes scrolling touch friendly
+        -webkit-overflow-scrolling: touch;
+    }
 
     @media only screen and (max-width: $bp-800) {
         z-index: 1000;
@@ -245,12 +254,18 @@
 
     // pargarphs styles
     [class*="mobile-p"] {
-        @media only screen and (max-width: $bp-800) {
+
+        @media only screen and (max-width: $bp-1100) {
             font-size: 2rem;
             color: $color-gray-blue-1;
-            padding: 2rem 3rem;
+            padding: 2rem 4rem;
             line-height: 3rem;
             text-align: justify;
+            min-width: 90%;
+        }
+
+        @media only screen and (max-width: $bp-800) {
+            padding: 2rem 3rem;
             min-width: 85%;
         }
 
@@ -260,21 +275,17 @@
         }
 
         @media only screen and (max-width: $bp-600) {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             padding: 2rem 4rem;
-            line-height: 2rem;
+            line-height: 2.3rem;
         }
 
         @media only screen and (max-width: $bp-500) {
-            font-size: 1.2rem;
             padding: 2rem 1.5rem;
-            line-height: 2rem;
         }
 
         @media only screen and (max-width: $bp-300) {
-            font-size: 1.2rem;
             padding: 2rem 2rem;
-            line-height: 2rem;
         }
     }
 

@@ -61,6 +61,8 @@ window.addEventListener('load', e => {
 
 
 // ****************************** NAVIGATION ******************************
+
+// Linking logo with GitHub for mobile devices
 logo.addEventListener('click', e => {
     if (body.clientWidth > 1000) {
         logo.removeAttribute("href");
@@ -72,6 +74,7 @@ logo.addEventListener('click', e => {
         logo.setAttribute("target", "_blank");
      }
 });
+
 
 navWorksBtn.addEventListener('click', e => {
     showSectionWorks();
