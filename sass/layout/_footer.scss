@@ -1,0 +1,22 @@
+// FOOTER
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background-color: $color-main;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__p {
+    color: $color-green;
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-align: center;
+
+    align-self: center;
+  }
+}

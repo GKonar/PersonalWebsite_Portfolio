@@ -1,10 +1,14 @@
 @import "abstracts/variables";
 
+@import "components/modal";
+
 @import "pages/home";
 
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/section-about";
 @import "layout/section-reachme";
+@import "layout/text-box";
+@import "layout/footer";
 
 @import "base/animations";

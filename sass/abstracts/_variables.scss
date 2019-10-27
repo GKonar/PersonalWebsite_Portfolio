@@ -9,6 +9,7 @@ $color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
+$color-grey-dark-4: rgb(122, 121, 121);
 $color-grey-dark-3: #333;
 
 $color-gray-blue: #2f3542;
@@ -18,15 +19,26 @@ $color-gray-blue-1: #a4b0be;
 $color-blue-1: #5352ed;
 $color-blue-2: #b2d0ee;
 $color-blue-3: #40739e;
+$color-blue-4: #4BA3C3;
+
+// $color-green: #3c6382;
+// $color-green: #60a3bc;
+$color-green: #16a085;
+$color-green-light: #16a08442;
 
 $color-white: #fff;
 $color-black: #000;
 
 
 $color-js: #fed330;
-$color-main: #F56040;
+// $color-main: #F56040;
+// $color-main: #4BA3C3;
+$color-main: #2f3542;
 
 // Media queries break points
+$bp-1400: 87.5em;
+$bp-1300: 81em;
+$bp-1200: 75em;
 $bp-1100: 68.5em;
 $bp-1000: 62.5em;
 $bp-900: 56em;

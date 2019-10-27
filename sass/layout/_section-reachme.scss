@@ -1,134 +1,50 @@
 // // ******************** SECTION REACH ME ********************
 .reach-me {
-    display: flex;
-    flex-direction: column;
-    // overflow: hidden;
-    
-    position: absolute;
-    top: -3rem;
-    bottom: 0;
-    z-index: 1000;
-    width: 25%;
-    padding: 2rem;
-    border-right: 1px solid $color-main;
-    
-    background-image: linear-gradient(to top, #031122 0%, $color-black 100%);
+    width: 100%;
+    position: relative; 
+    padding: 2rem 0;
+    flex-wrap: wrap;
+    background-color: $color-green-light;
     color: $color-gray-blue-1;
     font-size: 1.5rem;
-    margin-left: -25%;
 
-    @media only screen and (max-width: $bp-1100) {
-        background-image: linear-gradient(to bottom, #031122 0%, $color-black 100%);
-        position: relative;
-        top: 0rem;
-        margin-left: 0;
-        width: 100%;
-        border-right: none;
-    }
-
-    @media only screen and (max-width: $bp-800) {
-        background-image: linear-gradient(to bottom, #031122 0%, $color-black 100%);
-        position: relative;
-        top: 0rem;
-        margin-left: 0;
-        width: 100%;
-        border-right: none;
-    }
-
-    // ******************** TOP CONTENT
-    &__content-top {
-        flex: 0 0 50%;  //grow, shrink, basis
-
-        &:hover .reach-me__contact-heading{
-            color: $color-main;
-
-            @media only screen and (max-width: $bp-1100) {
-                color: $color-gray-blue-1;
-            }
-            &::before {
-                height: .2rem;
-                transform: scaleX(1);
-            }
-        }
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     // MY IMAGE
     &__img-container {
-        padding-top: 2rem;
-        width: 100%;
+        bottom: 75%;
+        position: absolute;
+        width: 13rem;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        @media only screen and (max-width: $bp-800) {
-            width: 80%;
-            margin: 0 auto;
-        }
+        overflow: hidden;
+        box-shadow: 10px 10px 30px -17px rgba(0,0,0,0.75);  
+
     }
 
     &__img {
-        width: 70%;
-        border: 2px solid $color-white;
-
-        @media only screen and (max-width: $bp-1100) {
-            width: 30%;
-        }
-        @media only screen and (max-width: $bp-800) {
-            width: 60%;
-        }
-        @media only screen and (max-width: $bp-500) {
-            width: 70%;
-        }
-        @media only screen and (max-width: $bp-300) {
-            width: 80%;
-        }
-        
+        width: 100%;
     }
 
+    // CONTACT / REACH ME
     &__contact {
-        padding: 2rem;
+        margin: 2rem;
+    
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        @media only screen and (max-width: $bp-1100) {
-            padding: 4rem 25rem;
-        }
-        @media only screen and (max-width: $bp-800) {
-            padding: 4rem 10rem;
-        }
-        @media only screen and (max-width: $bp-500) {
-            padding: 2rem 3.5rem;
-        }
-        @media only screen and (max-width: $bp-300) {
-            padding: 4rem 1rem;
-        }
+        flex-wrap: wrap;
     }
 
-    // CONTACT ME heading
     &__contact-heading {
         color: $color-main;
-        font-size: 3rem;
         position: relative;
         transition: .3s;
-        margin-bottom: 1.5rem;
-
-        @media only screen and (max-width: $bp-1100) {
-            color: $color-gray-blue-1;
-            padding-bottom: 1rem;
-        }
-
-        @media only screen and (max-width: $bp-500) {
-            margin-bottom: 0;
-        }
-
-        @media only screen and (max-width: $bp-300) {
-            font-size: 2.5rem;
-            width: 100%;
-            text-align: center;
-            padding-bottom: 1rem;
-        }
+        padding: .7rem 2rem;
 
         &::before {
             content: '';
@@ -137,49 +53,75 @@
             left: 0;
             background-color: $color-main;
             transition: .3s;
-            width: 100%;
+            // width: 100%;
             height: .2rem;
             transform: scaleX(0);
-
-            @media only screen and (max-width: $bp-1100) {
-                content: none;
-            }
         }
     }
 
-    &__contact-link {
+   &__contact-link {
         &,
         &:link,
         &:visited {
+            color: $color-main;
+            padding: .7rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: .7rem 0;
-            color: inherit;
-            text-decoration: none;
-            font-size: 2rem;
-            width: 80%;
+            justify-content: center;
+        }
+    }
 
-            @media only screen and (max-width: $bp-300) {
-                font-size: 1.7rem;
+    &__contact-link-underline_cv,
+    &__contact-link-underline_current,
+    &__contact-link-underline_github {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: flex;
+            border-bottom: 2px solid $color-main;
+            position: absolute;
+            top: 1.5rem;
+            z-index: 1;
+            opacity: 0;
+            transition: all .4s;
+            transform: translateY(1.5rem);
+            color: $color-main;
+            width: 31%;
+        }
+
+        &:hover { 
+            
+            // On hover change after sudo element styles
+            &::after {
+                color: $color-main;
+                transform: translateY(1rem);
+                opacity: 1;
+                z-index: 1;
             }
+        }
+    } 
+
+    &__contact-link-underline_current {
+        &::after {
+            width: 57%;
+        }
+    }
+
+    &__contact-link-underline_github {
+        &::after {
+            width: 60%;
         }
     }
 
     &__contact-mail {
         &:hover {
-            color: #80FF72;
-            
-            @media only screen and (max-width: $bp-1100) {
-                color: $color-gray-blue-1;
-            }
-
+            color: $color-green;
             .mail-icon {
-                fill: #80FF72;
-
-                @media only screen and (max-width: $bp-1100) {
-                    fill: $color-gray-blue-1;;
-                }
+                fill: $color-green;
             }
         }
     }
@@ -187,16 +129,8 @@
     &__contact-facebook {
         &:hover {
             color: #3B5998;
-
-            @media only screen and (max-width: $bp-1100) {
-                color: $color-gray-blue-1;
-            }
             .facebook-icon {
                 fill: #3B5998;
-
-                @media only screen and (max-width: $bp-1100) {
-                    fill: $color-gray-blue-1;
-                }
             }
         }
     }
@@ -204,194 +138,26 @@
     &__contact-instagram {
         &:hover {
             color: #c13584;
-
-            @media only screen and (max-width: $bp-1100) {
-                color: $color-gray-blue-1;
-            }
             .instagram-icon {
                 fill: #c13584;
-
-                @media only screen and (max-width: $bp-1100) {
-                    fill: $color-gray-blue-1;
-                }
-
-                @media only screen and (max-width: $bp-500) {
-                    width: 3.5rem;
-                    height: 3.5rem;
-                }
             }
         }
     }
 
-    // svg icons general
+    // SVG ICONS 
     &__icons {
-        width: 3.5rem;
-        height: 3rem;
-        fill: $color-white;
-
-        @media only screen and (max-width: $bp-300) {
-            width: 2rem;
-            height: 2rem;
-        }
+        fill: $color-main;
+        margin: 1rem;
     }
 
     .mail-icon {
-        width: 3.5rem;
-        height: 4rem;
-
-        @media only screen and (max-width: $bp-500) {
-            margin-right: 1px; 
-        }
-
-        @media only screen and (max-width: $bp-300) {
-            width: 2.2rem;
-            height: 3rem;
-        }
-    }
-
-    .facebook-icon {
-        @media only screen and (max-width: $bp-500) {
-            margin-right: 1px;
-        }
-       
+        width: 2.5rem;
+        height: 3rem;
     }
 
     .facebook-icon,
     .instagram-icon {
-        width: 3.5rem;
-        height: 3.5rem;
-        
-        @media only screen and (max-width: $bp-500) {
-            width: 3.5rem;
-            height: 3.5rem;
-        }
-    }
-
-    // ******************** BOTTOM CONTENT 
-    
-    &__content-bottom {
-        padding-top: 1rem;
-
-        &:hover .reach-me__more-heading {
-            color: $color-main;
-
-            @media only screen and (max-width: $bp-1100) {
-                color: $color-gray-blue-1;
-            }
-
-            &::before {
-                transform: scaleX(1);
-            }
-        }
-    }
-
-    &__more {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    &__more-heading {
-        color: $color-gray-blue-1;
-        font-size: 3rem;
-        position: relative;
-        transition: .3s;
-        padding-bottom: 1.5rem;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 70%;
-            left: 0;
-            background-color: $color-main;
-            transition: .3s;
-            width: 100%;
-            height: .2rem;
-            transform: scaleX(0);
-
-            @media only screen and (max-width: $bp-800) {
-                content: none;
-            }
-        }
-    } 
-
-    // More me link styles
-    &__more-link {
-    &,
-    &:link,
-    &:visited  {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: .8rem;
-        color: inherit;
-        text-decoration: none;
-        font-size: 2rem;
-        width: 80%;
-        }
-
-        &:hover {
-            color: $color-main;
-
-            @media only screen and (max-width: $bp-800) {
-                color: $color-gray-blue-1;
-            }
-        }
-    }
-
-    // MODAL 
-    // &__modal {
-    //     position: absolute;
-    //     transform: translate(-50%, -50%);
-    //     background-image: url();
-    //     top: 50%;
-    //     left: 300%;
-    //     width: 50rem;
-    //     height: 30rem;
-    //     background-color: #fff; 
-    //     z-index: 2100;
-    //     padding: 0 10rem;
-    //     border-radius: 5px;
-
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     flex-direction: column;
-
-    //     &--heading {
-    //         font-size: 3rem;
-    //     }
-
-    //     &--paragraph-1 { 
-
-    //     }
-        
-    //     &--paragraph-2 { 
-
-    //     }
-    // }
-    
-    // FOOTER
-    .footer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-
-        @media only screen and (max-width: $bp-1100) {
-            position: relative;
-        }
-
-        &__p {
-            text-align: center;
-            padding: 1rem 1rem;
-            background-color: rgba(245, 97, 64, 0.05);
-
-            @media only screen and (max-width: $bp-800) {
-                padding: 4rem 0 0 0;
-                background-color: transparent;
-            }
-        }
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }

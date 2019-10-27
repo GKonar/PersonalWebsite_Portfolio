@@ -1,24 +1,18 @@
 .header {
-    width: 100%;
-    height: 101.1vh;
+    width: 60%;
+    height: 35vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -6.5rem;
-    background-image: linear-gradient(to top, #031122 0%, $color-gray-blue 100%);
+    margin: 0rem auto;
+    background-size: cover;
+    background-position: center;
     position: relative;
-    // overflow: hidden;
+    font-family: $font-5;
 
     @media only screen and (max-width: $bp-1100) {
-        height: 100vh;
-    }
-
-    @media only screen and (max-width: $bp-800) {
-        height: 100vh;
-    }
-
-    &:hover {
-        cursor: url("/img/baloon.png"), auto;
+        height: 50vh;
     }
 
     // ********** HEADER TEXT ( paragraph + firstName + secondName )
@@ -26,297 +20,88 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        font-family: $font-5;
-        margin-right: 10rem;
-        letter-spacing: 6px;
+        font-family: $font-1;
         z-index: 10;
-        height: 100%;
-        position: absolute;
         transition: .5s;
         opacity: 0;
-        
+
         // ********* HELLO I AM STYLES ********
         &__paragraph {
             display: flex;
-            font-size: 3.5rem;
+            font-size: 3rem;
             position: relative;
-            font-weight: 700;
-            color: $color-white;
+            color: $color-main;
 
             @media only screen and (max-width: $bp-1100) {
-
                 font-size: 2.5rem;
             }
-
-            @media only screen and (max-width: $bp-500) {
-                font-size: 2.5rem;
-            }
-
-            @media only screen and (max-width: $bp-300) {
-                font-size: 1.8rem;
+            
+            @media only screen and (max-width: $bp-600) {
+                font-size: 2rem;
             }
         }
 
         // ********** FIRST AND SECOND-NAME STYLES **********
         [class*="name"] {
-            font-size: 8rem;
-            color: $color-white;
+            font-size: 5rem;
+            color: $color-main;
             overflow: hidden;
             margin-top: 0%;
-            height: 10rem;
-            font-weight: 700;
+            height: 6.5rem;
+            font-weight: 400;
             transition: 1s;
+            font-weight: 400;
 
 
             @media only screen and (max-width: $bp-1100) {
-                font-size: 6rem;
-                height: 7rem;
-            }
-
-            @media only screen and (max-width: $bp-700) {
-                font-size: 6rem;
-                height: 7rem;
-            }
-
-            @media only screen and (max-width: $bp-500) {
                 font-size: 4.5rem;
                 height: 5.5rem;
             }
 
-            @media only screen and (max-width: $bp-300) {
-                font-size: 3.5rem;
-                height: 5rem;
-            }
-        }
-    }
-
-    // TEXT BOX STYLES ***********
-    
-    .header__text-box {   
-        z-index: 10;
-        height: 60%;
-        width: 100%;
-        padding: 10% 15%;
-        overflow: scroll;
-        overflow-x: hidden;
-        position: relative;
-        top: -2rem;
-
-        @media only screen and (max-width: $bp-1100) {
-            padding: 5% 10%;
-            display: none;
-        }
-
-        // Paragraphs general styles
-        [class*="paragraph"] {
-            color: $color-white;
-            font-size: 2.2rem;
-            line-height:3.5rem;
-            text-align: justify;
-    
-            @media only screen and (max-width: $bp-800) {
-                font-size: 2rem;
-                line-height: 3.5rem;
-            }
-
-            @media only screen and (max-width: $bp-500) {
-                font-size: 1.6rem;
-                line-height: 3rem;
-            }
-
-            @media only screen and (max-width: $bp-300) {
-                line-height: 1.7rem;
-                line-height: 2.5rem;
+            @media only screen and (max-width: $bp-600) {
+                font-size: 4rem;
             }
         }
 
-        // Text box paragraphs
-        &-paragraph-first {
-            padding-top: 150rem; // when more text add more padding so text is not visible at the page load
-
-            @media only screen and (max-width: $bp-700) {
-                padding-top: 80rem;
-            }
-        }
-
-        &-paragraph-second {
-            padding-top: 2rem;
-        }
-
-        &-paragraph-third {
-            padding-top: 2rem; 
-            padding-bottom: 30rem;
-
-            @media only screen and (max-width: $bp-800) {
-                padding-bottom: 0rem;
-            }
-        }
-
-        &-size {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: $color-main;
-        }
-        
-        // ********** BTNS ********** 
-        //  General btn styles
-        &-btn-container {
-            display: flex;
-            justify-content: center;
-            padding-bottom: 4rem; // 18rem moz
-        }
-
-        &-btn {
-            &,
-            &:link,
-            &:visited{
-                color: $color-white;
-                text-decoration: none;
-                font-size: 2.5rem;
-                font-weight: 500;
-                padding: 1.5rem 4rem;
-                width: 30%;
-                border: 2px solid $color-white;
-                margin: 1rem;
-                text-align: center;
-            }
-
-            &:hover {
-                background-color: $color-main;
-                color: $color-white;
-                border: 2px solid $color-white;
-            }
-        }
-    }
-
-    // scroll display none
-    .header__text-box::-webkit-scrollbar { display: none; } 
-
-    // ********** ANIMATED ARROW  // FIX ARROW
-    &__arrow-container {
-        position: absolute;
-        bottom: 10%;
-        left: 10%;
-        opacity: .4;
-    }
-
-    &__arrow-icon {
-        font-size: 5rem;
-        text-shadow: 0 .2rem .5rem $color-main;
-        color: $color-main;
-        opacity: 0;
-        animation: moveTopBottom 1s cubic-bezier(.65,.7,0,.24) infinite 2s;
-
-        @media only screen and (max-width: $bp-800) {
+        .position {
             font-size: 3.5rem;
-        }
-    }
+            font-weight: 400;
 
-    .backdrop {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: #031122c6;
-        z-index: 1000;
+            @media only screen and (max-width: $bp-1100) {
+                font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: $bp-600) {
+                font-size: 2rem;
+            }
+        }
+
         
-        // display: none;
     }
 }
 
-// ************************************************
-// ************* MOBILE VIEW TEXT BOX *************
-// ************************************************
-
-// TEXT BOX VISIBLE ON MOBILE DEVICES
-.text-box__mobile {
-    display: none;
-    background-image: linear-gradient(to top, $color-gray-blue 0%, #031122 100%);
-
-    @media only screen and (max-width: $bp-1100) {
-        z-index: 1000;
-        display: flex;
-        overflow-x: auto;
-
-        // Makes scrolling touch friendly
-        -webkit-overflow-scrolling: touch;
-    }
-
-    @media only screen and (max-width: $bp-800) {
-        z-index: 1000;
-        display: flex;
-        overflow-x: auto;
-
-        // Makes scrolling touch friendly
-        -webkit-overflow-scrolling: touch;
-    }
-
-    // pargarphs styles
-    [class*="mobile-p"] {
-
-        @media only screen and (max-width: $bp-1100) {
-            font-size: 2rem;
-            color: $color-gray-blue-1;
-            padding: 2rem 4rem;
-            line-height: 3rem;
-            text-align: justify;
-            min-width: 90%;
-        }
-
-        @media only screen and (max-width: $bp-800) {
-            padding: 2rem 3rem;
-            min-width: 85%;
-        }
-
-        @media only screen and (max-width: $bp-700) {
-            font-size: 1.8rem;
-            line-height: 2.5rem;
-        }
-
-        @media only screen and (max-width: $bp-600) {
-            font-size: 1.6rem;
-            padding: 2rem 4rem;
-            line-height: 2.3rem;
-        }
-
-        @media only screen and (max-width: $bp-500) {
-            padding: 2rem 1.5rem;
-        }
-
-        @media only screen and (max-width: $bp-300) {
-            padding: 2rem 2rem;
-        }
-    }
-
-    .text-box__p-start {
-        color: $color-main;
-        font-weight: 700;
-    }
-}
-
-  // CLASSES TO ADD THROUGH JAVASCRIPT 
+// CLASSES TO ADD THROUGH JAVASCRIPT 
 
 .showGreeting {
-    animation: moveInFromLeft .5s cubic-bezier(.11,.93,.62,1.01);
+    animation: moveInFromLeft .5s cubic-bezier(.11, .93, .62, 1.01);
 
     @media only screen and (max-width: $bp-700) {
-        animation: moveInFromLeft .2s cubic-bezier(.11,.93,.62,1.01); 
+        animation: moveInFromLeft .2s cubic-bezier(.11, .93, .62, 1.01);
     }
 }
 
 .hideGreeting {
-    animation: moveBackToLeft .5s cubic-bezier(.11,.93,.62,1.01);
+    animation: moveBackToLeft .5s cubic-bezier(.11, .93, .62, 1.01);
     opacity: 0;
-    
+
     @media only screen and (max-width: $bp-700) {
-        animation: moveBackToLeft .3s cubic-bezier(.11,.93,.62,1.01); 
+        animation: moveBackToLeft .3s cubic-bezier(.11, .93, .62, 1.01);
     }
 }
-  
+
 .showName {
     animation: 2s slideUp ease;
-    
+
     @media only screen and (max-width: $bp-700) {
         animation: 1s slideUp ease;
     }
@@ -360,19 +145,20 @@
     margin-left: 25%;
 }
 
- // ***** Moving background *****
- .background {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
+// ***** Moving background *****
+// .background {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 1;
+//   }
+
 
 // Different value for Firefox
-@-moz-document url-prefix() { 
-    .header__text-box-btn-container { 
+@-moz-document url-prefix() {
+    .header__text-box-btn-container {
         margin-bottom: 14rem;
-    } 
+    }
 }

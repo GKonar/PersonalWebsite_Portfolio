@@ -208,7 +208,7 @@ body {
     .extras__list::after {
       content: '';
       position: absolute;
-      top: 40%;
+      top: 37%;
       left: 5%;
       width: 132%;
       border-bottom: 1px solid var(--color-grey-dark-3); }

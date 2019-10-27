@@ -54,45 +54,37 @@ function hideSectionWorks() {
     }, 500);
 };
 
-// ** Hide works section on scroll
-function hideSectionWorksOnScroll() {
-    if(headerTextBox.scroll) {
-        hideSectionWorks();
-    };
-};
-
-// ** Toggle ReachMe section
-function toggleReachMe() {
-    body.classList.toggle('margin'); // toggle !
-};
-
-// ** Hide ReachMe section (used on scroll)
-function hideReachMe() {
-    body.classList.remove('margin'); // remove !
-};
-
 // ** Sets text content of div.about__tech-desc 
 function setTextContent(name) {
     iconsDescBox.textContent = name;
 } 
 
-// ** Activates Blur for smartphones, only vertical mode ** 
-function ActivateBlurSmartphones() {
-  headerTextBoxMobile.scrollLeft >= 0 && headerTextBoxMobile.scrollLeft < 140 ?
-        headerTextBoxParagraphTwo.style.webkitFilter = "blur(3px)" :
-        headerTextBoxParagraphTwo.style.webkitFilter = "blur(0)";
+// ** Toggle modal ** 
+
+function showModal () {
+    console.log('??')
+    modal.classList.add('show');
+    backdrop.classList.add('show');
 }
 
-// ** Activates Blur for small tablets, only vertical mode ** 
-function ActivateBlurForSmallTablets() {
-    headerTextBoxMobile.scrollLeft >= 0 && headerTextBoxMobile.scrollLeft < 180 ?
-        headerTextBoxParagraphTwo.style.webkitFilter = "blur(3px)" :
-        headerTextBoxParagraphTwo.style.webkitFilter = "blur(0)";
+function hideModal () {
+    modal.classList.remove('show');
+    backdrop.classList.remove('show');
 }
 
-// ** Activates Blur for tablets, only vertical mode ** 
-function ActivateBlurForBigTablets() {
-    headerTextBoxMobile.scrollLeft >= 0 && headerTextBoxMobile.scrollLeft < 220 ?
-        headerTextBoxParagraphTwo.style.webkitFilter = "blur(3px)" :
-        headerTextBoxParagraphTwo.style.webkitFilter = "blur(0)";
-}
+// ** Scroll ** 
+function scrollTo(element) {
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: element.offsetTop
+    });
+  }
+
+  // ** SetLink **
+
+  function setLink(link) {
+    logo.setAttribute("href", link);
+    logo.setAttribute("target", "_blank");
+  }
+
