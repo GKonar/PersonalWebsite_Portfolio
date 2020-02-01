@@ -92,7 +92,7 @@
         font-size: 1.6rem;
         background-color: rgba(255, 255, 255, 0.584);
         text-align: justify;
-        box-shadow: 5px 5px 20px -17px rgba(0,0,0,0.75);  
+        box-shadow: 5px 5px 20px -17px rgba(0, 0, 0, 0.75);
 
         @media only screen and (max-width: $bp-1100) {
             padding: 1.5rem 3rem;
@@ -121,10 +121,12 @@
 }
 
 .backdrop {
+    // backdrop hack
     position: absolute;
-    width: 1000%;
-    height: 1000%;
-    top: 0;
+    width: 170%;
+    left: -308px;
+    height: 686%;
+    top: -69px;
     background-color: #031122c6;
     z-index: 1000;
 

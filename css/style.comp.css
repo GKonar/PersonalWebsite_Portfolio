@@ -124,8 +124,8 @@ body {
   transition: .3s;
   position: relative;
   background-color: #F3EFE0;
-  border-left: 1rem solid #2f3542;
-  border-right: 1rem solid #2f3542;
+  border-right: 1.5rem solid #2f3542;
+  border-left: 1.5rem solid #2f3542;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -254,7 +254,7 @@ body {
   margin: 0 auto;
   margin-top: 3rem;
   font-size: 62.5%;
-  width: 75%; }
+  width: 100%; }
   .navigation__logo {
     position: absolute;
     top: 10%;
@@ -562,7 +562,7 @@ body {
     position: relative; }
     @media only screen and (max-width: 81em) {
       .text-box__img-box {
-        width: 100%;
+        width: 94%;
         overflow: hidden; } }
   .text-box__img {
     width: 120%;

@@ -19,7 +19,6 @@ sans-serif;
 }
 
 html {
-    // Setting 1rem
     font-size: 62.5%; // 1rem = 10px
 }
 
@@ -29,10 +28,8 @@ body {
     width: 100%;
     transition: .3s;
     position: relative;
-    background-color: #F3EFE0;
-    border-left: 1rem solid $color-main;
-    border-right: 1rem solid $color-main;
-    // overflow: hidden;
+    background-color: #ecf0f1;
+    border: 1.5rem solid $color-main;
     overflow: visible;
 
     display: flex;
