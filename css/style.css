@@ -150,7 +150,7 @@ body {
   font-family: "Lato", sans-serif; }
   @media only screen and (max-width: 68.5em) {
     .header {
-      height: 50vh; } }
+      height: 40vh; } }
   .header .heading-primary {
     display: flex;
     justify-content: center;

@@ -40,10 +40,9 @@ const scrollTopButton = document.querySelector('.text-box-btn');
 
 // ******************** WINDOW EVENTS ********************
 
-window.addEventListener('scroll' , e => {
+window.addEventListener('scroll', e => {
     const distanceFromTop = document.documentElement.scrollTop;
     if (distanceFromTop > 500) {
-        console.log('hej btn');
         scrollTopButton.style.transform = "translate(0)"
     } else {
         scrollTopButton.style.transform = "translate(30rem)"
@@ -53,8 +52,8 @@ window.addEventListener('scroll' , e => {
 // ******************** LOAD EVENTS ********************
 // showing hello ad the start of the page
 window.addEventListener('load', e => {
-   showGreeting();
-   helloIAmGrzegorz.style.opacity = "1";
+    showGreeting();
+    helloIAmGrzegorz.style.opacity = "1";
 });
 
 // ****************************** NAVIGATION ******************************
@@ -65,27 +64,14 @@ logo.addEventListener('click', e => setLink("https://github.com/gkonar"));
 
 // ****************************** SECTION ABOUT ******************************
 // Technologies icons
-js.addEventListener('mouseover', e => setTextContent('JavaScript'));
-js.addEventListener('mouseleave', e => setTextContent(''));
 
-css.addEventListener('mouseover', e => setTextContent('CSS'));
-css.addEventListener('mouseleave', e => setTextContent(''));
+const icons = [js, css, html, github, npm, webpack, sass];
+const desc = ['JavaScript', 'CSS', 'HTML', 'GitHub', 'NPM', 'Webpack', 'Sass'];
 
-html.addEventListener('mouseover', e => setTextContent('HTML'));
-html.addEventListener('mouseleave', e => setTextContent(''));
-
-github.addEventListener('mouseover', e => setTextContent('GitHub'));
-github.addEventListener('mouseleave', e => setTextContent(''));
-
-npm.addEventListener('mouseover', e => setTextContent('NPM'));
-npm.addEventListener('mouseleave', e => setTextContent(''));
-
-webpack.addEventListener('mouseover', e => setTextContent('Webpack'));
-webpack.addEventListener('mouseleave', e => setTextContent(''));
-
-sass.addEventListener('mouseover', e => setTextContent('Sass'));
-sass.addEventListener('mouseleave', e => setTextContent(''));
-
+icons.forEach((icon, i) => {
+    icon.addEventListener('mouseover', e => setTextContent(desc[i]));
+    icon.addEventListener('mouseleave', e => setTextContent(''));
+})
 // ****************************** FOOTER ******************************
 // Place year in DOM
 year.textContent = yearUpdate();
@@ -102,7 +88,7 @@ current.addEventListener('click', e => {
 
 backdrop.addEventListener('click', e => {
     hideModal()
-}) 
+})
 
 // ****************************** SCROLL EVENTS  ******************************
 navReachMeBtn.addEventListener('click', (e) => {
@@ -112,6 +98,3 @@ navReachMeBtn.addEventListener('click', (e) => {
 scrollTopButton.addEventListener('click', (e) => {
     scrollTo(document.querySelector('.navigation'));
 });
-
-
-
