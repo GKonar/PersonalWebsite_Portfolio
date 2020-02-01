@@ -37,7 +37,7 @@ function scrollTo(element) {
 }
 
 // ** SetLink **
-function setLink(link) {
-    logo.setAttribute("href", link);
-    logo.setAttribute("target", "_blank");
-}
+// function setLink(link) {
+//     logo.setAttribute("href", link);
+//     logo.setAttribute("target", "_blank");
+// }

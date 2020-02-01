@@ -145,8 +145,9 @@
     }
 
     &:hover {
-      background-color: $color-main;
-      color: $color-green;
+      // background-color: $color-main;
+      // color: $color-green;
+      cursor: pointer;
     }
   }
 }

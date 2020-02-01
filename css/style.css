@@ -295,8 +295,8 @@ body {
     position: absolute;
     left: 50%;
     top: 0; }
-  .navigation .sun {
-    display: none; }
+    .navigation__dark-mode:hover {
+      cursor: pointer; }
   .navigation__items {
     display: flex;
     justify-content: flex-end;
@@ -636,8 +636,7 @@ body {
     .text-box-btn:active {
       box-shadow: 8px 8px 15px -10px rgba(0, 0, 0, 0.75); }
     .text-box-btn:hover {
-      background-color: #2f3542;
-      color: #16a085; }
+      cursor: pointer; }
 
 .footer {
   position: relative;

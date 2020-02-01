@@ -20,7 +20,7 @@
         </a>
         <div class="navigation__dark-mode">
             <img class="navigation__dark-mode-icon" id="darkModeButton" src="./img/svg__icons/dark.svg"
-                alt="dark-light-mode">
+                alt="dark-light-mode" title="Click to toggle dark mode">
         </div>
         <ul class="navigation__items">
             <!-- <li class="navigation__item"><a href="#" class="navigation__link" id="darkModeButton">Light On/Off</a></li> -->
@@ -55,26 +55,25 @@
         </div>
         <div class="text-box__content">
             <h3 class="text-box__header">About:</h3>
+
             <p class="text-box-paragraph-first" id="paragraphAboutFirst">
                 <span class="text-box__beginning-size">I'm Grzegorz. </span>I am looking
                 for Frontend developer
-                position to quickly ramp up skills. My journey started around one and half year ago. During
+                position to quickly ramp up skills. My journey started around two years ago. During
                 this time i was shaping my skills mostly by myself. I was practicing, experimenting and
                 learning new things every day. To learn more, and review what I already know, I took part in <a
                     class="text-box__link" href="https://kodilla.com/en" target="_blank">Front-End Bootcamp</a>.
-                To check exactly my path please follow link to my <a class="text-box__link"
+                To check exactly my path please go through my <a class="text-box__link"
                     href="https://www.linkedin.com/in/grzegorz-konarski-872ba0165/" target="_blank">LinkedIn</a>.
             </p>
 
             <p class="text-box-paragraph-second" id="paragraphAboutSecond">
                 <span class="text-box__beginning-size">Privatly</span> I am super happy father and husband. Big sports
-                fan. New tech lover, wine drinker and very positive and relaxed person. Check me out.
-                Looking forward to hearing from You.
-            </p>
+                fan. New tech lover, wine drinker and very positive and relaxed person.
 
-            <div class="text-box-btn-container">
-                <a class="text-box-btn">.Up</a>
-            </div>
+                <div class="text-box-btn-container">
+                    <a class="text-box-btn">.Up</a>
+                </div>
         </div>
     </section>
 
@@ -82,7 +81,8 @@
     <section class="about">
         <div class="about__left">
             <h3 class="about__header">Skills:</h3>
-            <h1 class="about__heading"><span class="text-box__beginning-size">Some</span> of the technologies which I
+            <h1 class="about__heading"><span class="text-box__beginning-size">Some</span> of the technologies and tools
+                which I
                 use:</h1>
             <div class="about__icons">
                 <div class="about__icon-js">
@@ -148,16 +148,18 @@
                     <use xlink:href="img/svg__icons-contact/sprite-1.svg#icon-instagram"></use>
                 </svg></a>
             </a>
-            <a href="/cv/index.html"
-                class="reach-me__more-cv reach-me__contact-link reach-me__contact-link-underline_cv"
-                target="_blank">CV</a>
+            <a href="/cv/GrzegorzKonarski-resume.pdf"
+                class="reach-me__more-cv reach-me__contact-link reach-me__contact-link-underline_cv" target="_blank"
+                download>
+                CV
+            </a>
             <!-- <a href="#" class="reach-me__more-current reach-me__contact-link reach-me__contact-link-underline_current"
                 target="_blank">Current</a> -->
             <a href="https://github.com/gkonar" target="_blank"
                 class="reach-me__more-github reach-me__contact-link reach-me__contact-link-underline_github">GitHub</a>
         </div>
         <!-- MODAL -->
-        <div class="reach-me__modal">
+        <!-- <div class="reach-me__modal">
             <span class="reach-me__modal-exitBtn"></span>
             <h1 class="reach-me__modal--heading">Hello !</h1>
             <p class="reach-me__modal--paragraph">
@@ -170,13 +172,13 @@
                 Contact me and I will show codebase to You and talk about it in greater detail.
             </p>
             <p class="reach-me__modal--paragraph-2">Grzegorz</p>
-        </div>
+        </div> -->
     </section>
     <footer class="footer">
         <p class="footer__p">.handcrafted by me &copy; <span id="year"></span></p>
     </footer>
-    <script src="/js/functions.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/dist/functions.min.js"></script>
+    <script src="/dist/main.min.js"></script>
 </body>
 
 </html>

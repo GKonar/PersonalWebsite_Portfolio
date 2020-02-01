@@ -66,12 +66,10 @@
         position: absolute;
         left: 50%;
         top: 0;
-    }
 
-    &__dark-mode-icon {}
-
-    .sun {
-        display: none;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     // ********** MENU ITEMS STYLES
@@ -112,10 +110,6 @@
                 opacity: 1;
                 z-index: 1;
             }
-        }
-
-        &:hover .navigation__link {
-            // color: $color-main;
         }
     }
 

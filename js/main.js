@@ -68,7 +68,7 @@ window.addEventListener('load', e => {
 // ****************************** NAVIGATION ******************************
 
 // Linking logo with GitHub for mobile devices
-logo.addEventListener('click', e => setLink("https://github.com/gkonar"));
+// logo.addEventListener('click', e => setLink("https://github.com/gkonar"));
 let darkMode = true;
 darkModeButton.addEventListener('click', () => {
     // simple dark mode implementation
@@ -107,9 +107,9 @@ icons.forEach((icon, i) => {
 year.textContent = yearUpdate();
 
 // ****************************** MODAL  ******************************
-modalExitBtn.addEventListener('click', e => {
-    hideModal();
-});
+// modalExitBtn.addEventListener('click', e => {
+//     hideModal();
+// });
 
 // current.addEventListener('click', e => {
 //     e.preventDefault();
