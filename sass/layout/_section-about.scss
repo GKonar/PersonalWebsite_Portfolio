@@ -1,6 +1,6 @@
 .about {
     font-weight: 600;
-    color: $color-main;
+    // color: $color-main;
     line-height: 3rem;
     position: relative;
     bottom: 0; // 0
@@ -18,18 +18,18 @@
     @media only screen and (max-width: $bp-1300) {
         width: 60%;
     }
-    
+
     @media only screen and (max-width: $bp-800) {
         width: 70%;
     }
-    
+
     @media only screen and (max-width: $bp-700) {
         width: 75%;
     }
 
     @media only screen and (max-width: $bp-600) {
         width: 80%;
-      }
+    }
 
     &__header {
         color: $color-grey-dark-4;
@@ -56,7 +56,7 @@
 
     // SVG ICONS STYLES
     &__icons {
-        padding: 2.5em 0; 
+        padding: 2.5em 0;
 
         display: flex;
         align-items: baseline;
@@ -80,18 +80,18 @@
 
     .webpack {
         fill: #F3EFE0;
-    } 
-        
+    }
+
     .github {
         color: $color-green;
         text-decoration: underline;
         position: relative;
     }
-        
+
     .npm {
         fill: red;
     }
-        
+
     .html {
         fill: orangered;
     }
@@ -99,7 +99,7 @@
     .css {
         fill: $color-blue-3;
     }
-        
+
     .js {
         width: 3.5rem;
         height: 3.5rem;
@@ -117,23 +117,24 @@
             display: none;
         }
     }
-//// **************** SVG ICONS STYLES END HERE
 
-//// **************** RIGHT SIDE CONTENT
+    //// **************** SVG ICONS STYLES END HERE
+
+    //// **************** RIGHT SIDE CONTENT
 
     // Right Content .Works **************
     &__right {
         padding-bottom: 5rem;
-        
+
         &-paragraph {
             line-height: 3rem;
             font-size: 1.6rem;
             margin-bottom: 8rem;
-            
+
             @media only screen and (max-width: $bp-1300) {
                 font-size: 1.5rem;
             }
-            
+
             @media only screen and (max-width: $bp-800) {
                 font-size: 1.4rem;
             }
@@ -144,9 +145,19 @@
 // Classes to add through JS
 
 // display
-.flex { display: flex; }
-.none { display: none; }
+.flex {
+    display: flex;
+}
+
+.none {
+    display: none;
+}
 
 // position
-.bottomShow { bottom: -1%; }
-.bottomHide { bottom: -40%; } 
+.bottomShow {
+    bottom: -1%;
+}
+
+.bottomHide {
+    bottom: -40%;
+}

@@ -122,11 +122,11 @@ body {
   height: 100%;
   box-sizing: border-box;
   width: 100%;
-  transition: .3s;
   position: relative;
   background-color: #ecf0f1;
   border: 1.5rem solid #2f3542;
   overflow: visible;
+  color: #2f3542;
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
@@ -157,13 +157,11 @@ body {
     flex-direction: column;
     font-family: "Raleway", sans-serif;
     z-index: 10;
-    transition: .5s;
     opacity: 0; }
     .header .heading-primary__paragraph {
       display: flex;
       font-size: 3rem;
-      position: relative;
-      color: #2f3542; }
+      position: relative; }
       @media only screen and (max-width: 68.5em) {
         .header .heading-primary__paragraph {
           font-size: 2.5rem; } }
@@ -172,12 +170,10 @@ body {
           font-size: 2rem; } }
     .header .heading-primary [class*="name"] {
       font-size: 5rem;
-      color: #2f3542;
       overflow: hidden;
       margin-top: 0%;
       height: 6.5rem;
       font-weight: 400;
-      transition: 1s;
       font-weight: 400; }
       @media only screen and (max-width: 68.5em) {
         .header .heading-primary [class*="name"] {
@@ -261,8 +257,6 @@ body {
     left: 5%;
     font-size: 2.2rem;
     font-weight: 700;
-    color: #2f3542;
-    transition: .4s;
     letter-spacing: 1px;
     text-decoration: none; }
     @media only screen and (max-width: 50em) {
@@ -279,70 +273,64 @@ body {
         left: 12%; } }
     .navigation__logo::after {
       content: "";
-      border: 4px solid #2f3542;
+      border: 4px solid;
       width: 200%;
       height: 200%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      transition: .8s; }
-    .navigation__logo:hover {
-      color: #2f3542; }
+      transition: .4s; }
+    .navigation__logo:hover::after {
+      border: 4px solid;
+      left: -50%;
+      top: -50%;
+      transform: rotate(180deg); }
       @media only screen and (max-width: 68.5em) {
-        .navigation__logo:hover {
-          color: #fff; } }
-      .navigation__logo:hover::after {
-        border: 4px solid #2f3542;
-        left: -50%;
-        top: -50%;
-        transform: rotate(180deg); }
-        @media only screen and (max-width: 68.5em) {
-          .navigation__logo:hover::after {
-            transform: none;
-            border: 3px solid #fff; } }
+        .navigation__logo:hover::after {
+          transform: none;
+          border: 3px solid #fff; } }
+  .navigation__dark-mode {
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 0; }
+  .navigation .sun {
+    display: none; }
   .navigation__items {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
-    margin-right: 5rem;
-    color: #2f3542; }
+    margin-right: 5rem; }
     @media only screen and (max-width: 68.5em) {
       .navigation__items {
         display: none; } }
   .navigation__item {
     margin: 0rem 4rem;
     transition: all .4s;
-    color: #2f3542;
     position: relative; }
     .navigation__item::after {
       content: "";
       display: flex;
-      border-bottom: 2px solid #2f3542;
+      border-bottom: 2px solid;
       position: absolute;
       top: 1.5rem;
       z-index: 1;
       opacity: 0;
       transition: all .4s;
       transform: translateY(1.5rem);
-      color: #2f3542;
       width: 100%; }
     .navigation__item:hover::after {
-      color: #2f3542;
       transform: translateY(1rem);
       opacity: 1;
       z-index: 1; }
-    .navigation__item:hover .navigation__link {
-      color: #2f3542; }
   .navigation__link:link, .navigation__link:visited {
     text-decoration: none;
-    color: #2f3542;
-    font-size: 2rem;
-    transition: .5s; }
+    color: inherit;
+    font-size: 2rem; }
 
 .about {
   font-weight: 600;
-  color: #2f3542;
   line-height: 3rem;
   position: relative;
   bottom: 0;
@@ -504,7 +492,7 @@ body {
     .reach-me__contact-link-underline_cv::after, .reach-me__contact-link-underline_current::after, .reach-me__contact-link-underline_github::after {
       content: "";
       display: flex;
-      border-bottom: 2px solid #2f3542;
+      border-bottom: 2px solid;
       position: absolute;
       top: 1.5rem;
       z-index: 1;
@@ -525,7 +513,7 @@ body {
   .reach-me__contact-mail:hover {
     color: #16a085; }
     .reach-me__contact-mail:hover .mail-icon {
-      fill: #16a085; }
+      fill: #8e44ad; }
   .reach-me__contact-facebook:hover {
     color: #3B5998; }
     .reach-me__contact-facebook:hover .facebook-icon {
@@ -553,7 +541,6 @@ body {
   padding: 0;
   width: 100%;
   margin: 0 auto;
-  color: #2f3542;
   align-items: center; }
   .text-box__img-box {
     display: flex;
@@ -635,7 +622,7 @@ body {
         display: none; } }
   .text-box-btn {
     background-color: #16a08442;
-    border: 3px solid #2f3542;
+    border: 3px solid;
     padding: 1.7rem 1.5rem;
     border-radius: 50%;
     margin: 5rem;
@@ -645,8 +632,7 @@ body {
     transform: translateX(30rem);
     box-shadow: 15px 15px 30px -10px rgba(0, 0, 0, 0.75); }
     .text-box-btn, .text-box-btn:link, .text-box-btn:visited {
-      text-decoration: none;
-      color: #2f3542; }
+      text-decoration: none; }
     .text-box-btn:active {
       box-shadow: 8px 8px 15px -10px rgba(0, 0, 0, 0.75); }
     .text-box-btn:hover {

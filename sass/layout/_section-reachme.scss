@@ -1,7 +1,7 @@
 // // ******************** SECTION REACH ME ********************
 .reach-me {
     width: 100%;
-    position: relative; 
+    position: relative;
     padding: 2rem 0;
     flex-wrap: wrap;
     background-color: $color-green-light;
@@ -22,7 +22,7 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        box-shadow: 10px 10px 30px -17px rgba(0,0,0,0.75);  
+        box-shadow: 10px 10px 30px -17px rgba(0, 0, 0, 0.75);
 
     }
 
@@ -33,7 +33,7 @@
     // CONTACT / REACH ME
     &__contact {
         margin: 2rem;
-    
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -59,7 +59,8 @@
         }
     }
 
-   &__contact-link {
+    &__contact-link {
+
         &,
         &:link,
         &:visited {
@@ -82,7 +83,7 @@
         &::after {
             content: "";
             display: flex;
-            border-bottom: 2px solid $color-main;
+            border-bottom: 2px solid;
             position: absolute;
             top: 1.5rem;
             z-index: 1;
@@ -93,8 +94,8 @@
             width: 31%;
         }
 
-        &:hover { 
-            
+        &:hover {
+
             // On hover change after sudo element styles
             &::after {
                 color: $color-main;
@@ -103,7 +104,7 @@
                 z-index: 1;
             }
         }
-    } 
+    }
 
     &__contact-link-underline_current {
         &::after {
@@ -120,8 +121,9 @@
     &__contact-mail {
         &:hover {
             color: $color-green;
+
             .mail-icon {
-                fill: $color-green;
+                fill: $color-mail;
             }
         }
     }
@@ -129,6 +131,7 @@
     &__contact-facebook {
         &:hover {
             color: #3B5998;
+
             .facebook-icon {
                 fill: #3B5998;
             }
@@ -138,6 +141,7 @@
     &__contact-instagram {
         &:hover {
             color: #c13584;
+
             .instagram-icon {
                 fill: #c13584;
             }

@@ -26,11 +26,13 @@ body {
     height: 100%;
     box-sizing: border-box;
     width: 100%;
-    transition: .3s;
+    // transition: .3s;
     position: relative;
     background-color: #ecf0f1;
     border: 1.5rem solid $color-main;
     overflow: visible;
+    color: $color-gray-blue;
+    // color: white;
 
     display: flex;
     flex-direction: column;
