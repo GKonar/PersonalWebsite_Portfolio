@@ -17,15 +17,15 @@ function setTextContent(name) {
 }
 
 // ** Toggle modal ** 
-function showModal() {
-    modal.classList.add('show');
-    backdrop.classList.add('show');
-}
+// function showModal() {
+//     modal.classList.add('show');
+//     backdrop.classList.add('show');
+// }
 
-function hideModal() {
-    modal.classList.remove('show');
-    backdrop.classList.remove('show');
-}
+// function hideModal() {
+//     modal.classList.remove('show');
+//     backdrop.classList.remove('show');
+// }
 
 // ** Scroll ** 
 function scrollTo(element) {
