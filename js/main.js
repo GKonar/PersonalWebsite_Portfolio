@@ -66,10 +66,7 @@ window.addEventListener('load', e => {
 });
 
 // ****************************** NAVIGATION ******************************
-
-// Linking logo with GitHub for mobile devices
-// logo.addEventListener('click', e => setLink("https://github.com/gkonar"));
-let darkMode = true;
+window.darkMode = true;
 darkModeButton.addEventListener('click', () => {
     // simple dark mode implementation
     if (darkMode) {
@@ -79,7 +76,7 @@ darkModeButton.addEventListener('click', () => {
         sectionReachme.style.backgroundColor = '#16a085';
         scrollTopButton.style.backgroundColor = '#2f3542';
         darkModeIcon.src = "../img/svg__icons/light.svg";
-        darkMode = false;
+        window.darkMode = false;
     } else {
         body.style.backgroundColor = '';
         body.style.borderColor = '';
@@ -87,7 +84,7 @@ darkModeButton.addEventListener('click', () => {
         sectionReachme.style.backgroundColor = '';
         scrollTopButton.style.backgroundColor = '';
         darkModeIcon.src = "../img/svg__icons/dark.svg";
-        darkMode = true
+        window.darkMode = true
     }
 });
 
@@ -105,20 +102,6 @@ icons.forEach((icon, i) => {
 // ****************************** FOOTER ******************************
 // Place year in DOM
 year.textContent = yearUpdate();
-
-// ****************************** MODAL  ******************************
-// modalExitBtn.addEventListener('click', e => {
-//     hideModal();
-// });
-
-// current.addEventListener('click', e => {
-//     e.preventDefault();
-//     showModal();
-// });
-
-backdrop.addEventListener('click', e => {
-    hideModal()
-})
 
 // ****************************** SCROLL EVENTS  ******************************
 navReachMeBtn.addEventListener('click', (e) => {
